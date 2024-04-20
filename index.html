@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+</head>
+<style>
+    
+    h1{
+        color: darkblue;
+    }
+    input{
+
+        width: 300px;
+        height: 20px;
+        margin: 2px;
+
+        
+
+    }
+    #btn{
+        background-color: darkblue;
+        width:310px ;
+        height: 45px;
+        color:whitesmoke;
+        
+    }
+    #upbtn{
+        background-color: darkblue;
+        width:310px ;
+        height: 45px;
+        color:whitesmoke;
+        display: none;
+        
+    }
+   tr,th,td{
+        
+        padding: 10px;
+        border-bottom: 1px solid darkblue;
+     
+    }
+    th{
+        background-color: darkblue;
+        color: whitesmoke;
+    }
+   
+    .delbtn{
+        color: red;
+        text-decoration: none;
+        padding: 10px;
+    }
+    .editbtn{
+        color: blue;  
+        text-decoration: none;
+        padding: 10px;
+
+    }
+    .save{
+        color: green;  
+        text-decoration: none;
+        padding: 10px;
+
+    }
+    #filter{
+        border: none;
+        border-bottom: 1px solid black;
+        margin: 30px;
+    }
+
+</style>
+<body>
+<div>
+
+
+    <h1>My students</h1>
+    <form id="myForm">
+        <label for="email">Email</label>
+        <br>
+        <input type="text"  id="email">
+        <br><br>
+        <label for="age">Age</label>
+        <br>
+        <input type="text"  id="age">
+        <br><br>
+        <label for="marks">Marks</label>
+        <br>
+        <input type="text" id="marks">
+        <br>
+        <br>
+        <label for="sub">Subjects</label>
+        <br>
+        <input type="text" id="sub">
+        <br><br>
+        <input type="submit" value="Add Students" id="btn"><br>
+        <!-- <input type="button" value="Update std" id="upbtn"> -->
+    </form>
+
+   <input type="text"  id="filter" placeholder="Filter Student------------">
+   
+    <table>
+        <thead >
+            <tr>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Marks</th>
+                <th>Subject</th>
+                <th>Actions</th>  
+            </tr>
+            </thead>
+            <tbody id="list">
+
+            </tbody>
+    </table>
+</div>
+
+   <script src="app.js"></script> 
+</body>
+</html>
