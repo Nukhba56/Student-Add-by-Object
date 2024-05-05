@@ -93,9 +93,11 @@ class UI{
        a.classList.add("save");
        console.log(a);
           anTd.appendChild(a);  
-        //   var edit = document.querySelector(".editbtn");
-        //   edit.style.display = "none";
+          let edit = document.querySelector(".editbtn");
+        
+          edit.style.display = "none";
           btnadd.style.display = "none";
+          
         }
         else if(btn.classList.contains("save")){
             td =  btn.parentElement.parentElement.children;
@@ -107,8 +109,9 @@ class UI{
                      td[3].innerText = sub.value ; 
         }
         let save = document.querySelector(".save");
+        let edit = document.querySelector(".editbtn");
         save.style.display = "none";
-         //edit.style.display = "inline";
+        edit.style.display = "inline";
           btnadd.style.display = "inline";
           UI.clearFields();
           
