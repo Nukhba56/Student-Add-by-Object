@@ -61,7 +61,7 @@ class UI{
     static actionsStd(el){
      var td;
     let btn = el;
-    let anTd = el.parentElement;
+    let anTd = btn.parentElement;
     const list = document.querySelector("#list");
     let btnadd = document.querySelector("#btn");
     
@@ -166,30 +166,22 @@ const filterStd = ()=>{
     let tr = list.querySelectorAll("tr");
     console.log(list,val);
     for(let i = 0 ; i< tr.length ; i++){
-        let td = tr[i].querySelectorAll("td");
-        //console.log(tr[i]);
-        //console.log(td);
-        for(let j = 0 ; j<td.length ; j ++){
-            console.log(td[j].innerText,j);
-            
-            if(td[j].innerHTML.toUpperCase().indexOf(val) > -1){
-                   
-                td[j].style.display = "";
-                // const row = document.createElement("tr");
-                // row.innerHTML = `<td>${td[0].innerText}</td>
-                //                  <td>${td[1].innerText}</td>
-                //                  <td>${td[2].innerText}</td>
-                //                  <td>${td[3].innerText}</td>
-                //                  <td><a href="#" class="delbtn">X</a><a href="#" class="editbtn">Edit</a></td>`
-            
-                
 
+        let td = tr[i].querySelectorAll("td")[0];
+        console.log(tr[i]);
+        console.log(td);
+       
+        if(td){
+            let tdVal = td.innerHTML || td.innerContent;
+            if(tdVal.toUpperCase().indexOf(val) > -1){
+                tr[i].style.display = "";
             }
             else{
-                td[j].style.display = "none";
+                tr[i].style.display = "none";
             }
-            
         }
+         
+
   
 
 
